@@ -5,7 +5,7 @@
         auth="Container"
         name="jdbc/despliegue"
         driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://172.16.205.166:3306/despliegue"
+        url="jdbc:mysql://172.16.205.167:3306/despliegue"
         username="root"
         password="root"
 

@@ -74,6 +74,6 @@
     <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
     
     <target name="desplegar" depends="clean,dist">      
-        <deploy url="http://172.16.205.115/manager/text" username="admin" password="admin" path="/PruebaAnt" war="C:\Users\alumno\Documents\NetBeansProjects\PruebaAnt\dist\PruebaAnt.war" update="true"/>
+        <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="C:\Users\alumno\Documents\NetBeansProjects\PruebaAnt\dist\PruebaAnt.war" update="true"/>
     </target>
 </project>
