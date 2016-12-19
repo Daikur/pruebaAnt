@@ -73,8 +73,11 @@
     <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
     <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
     
+        <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+        <property name="j2ee.server.home" value="tools/ant" />
+    
     <target name="desplegar" depends="clean,dist">      
-        <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="./dist/PruebaAnt.war" update="true"/>
-        <property name="j2ee.server.home" value="./tools/ant/lib" />
+        <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="./dist/DAWpruebaAnt.war" update="true"/>
+
     </target>
 </project>
