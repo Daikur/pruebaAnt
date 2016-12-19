@@ -75,6 +75,6 @@
     
     <target name="desplegar" depends="clean,dist">      
         <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="./dist/PruebaAnt.war" update="true"/>
-        <property name="j2ee.server.home" value="./lib" />
+        <property name="j2ee.server.home" value="./tools/ant/lib" />
     </target>
 </project>
