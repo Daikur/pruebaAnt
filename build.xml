@@ -76,8 +76,29 @@
         <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
         <property name="j2ee.server.home" value="tools/ant" />
     
-    <target name="desplegar" depends="clean,dist">      
-        <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="./dist/DAWpruebaAnt.war" update="true"/>
+        <!--HACER EJERCICIOS-->
+        
+        <target name="desplegar" depends="-enable-produccion,dist">      
+            <deploy url="http://172.16.205.118/manager/text" username="admin" password="admin" path="/PruebaAnt" war="./dist/DAWpruebaAnt.war" update="true"/>
+        </target> 
 
-    </target>
+
+        <target name="-enable-produccion">
+            <property name="enableProduccion" value="true"></property>
+        </target>
+        
+        <target name="-pre-dist" if="-base-datos-produccion">
+            
+        </target>
+        
+        
+        <target name="-base-datos-produccion" if="enableProduccion" >
+            <delete file="./build/web/META-INF/context.xml"></delete>
+            <move file="./web/META-INF/context-produccion.xml" tofile="./web/META-INF/context.xml"></move>
+        </target> 
+               
+
+        
+   
+
 </project>
